@@ -5,135 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing Page</title>
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="lightbox.js"></script>
 
-  <script>
-    lightbox.option({
-      'showImageNumberLabel': false,
-      'fitImagesInViewport': false,
-    })
-  </script>
-
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .navbar {
-      background-color: rgba(10, 33, 73, 0.7);
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 99;
-      position: fixed;
-    }
-
-    .main {
-      margin-bottom: 20px;
-      margin-top: 80px;
-      color: maroon;
-      overflow: hidden;
-    }
-
-    .main img {
-      width: 90%;
-      margin-top: 10px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 10px;
-    }
-
-    .main button {
-      margin-top: 10px;
-    }
-
-    .footer {
-      width: 100%;
-      text-align: center;
-      background-image: linear-gradient(135deg, #92FFC0 10%, #002661 100%);
-      color: whitesmoke;
-    }
-
-    .footer a {
-      color: whitesmoke;
-    }
-
-    :root {
-      --primary-color: #3a4052;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    h1 {
-      font-weight: 300;
-      font-size: 60px;
-      line-height: 1.2;
-      margin-bottom: 15px;
-    }
-
-    .showcase {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-      padding: 0 20px;
-    }
-
-    .video-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: var(--primary-color) url('backgrouund_set.png') no-repeat center center/cover;
-    }
-
-    .video-container video {
-      min-width: 100%;
-      min-height: 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-    }
-
-    .video-container:after {
-      content: '';
-      z-index: 1;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.5);
-      position: absolute;
-    }
-
-    .content {
-      z-index: 2;
-    }
-  </style>
-
+  <link rel="stylesheet" href="style/style_index.css">
+  <link rel="stylesheet" href="style/body.css">
 
 </head>
 
@@ -146,28 +26,28 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="#home">Home</a>
-        <a class="nav-item nav-link" href="#work">Work</a>
+        <a class="nav-item nav-link" href="#portfolio">Portfolio</a>
       </div>
     </div>
   </nav>
 
   <div class="container">
-    <section class="showcase">
+    <section class="showcase" id="home">
       <div class="video-container">
-        <video src="background.mp4" autoplay muted loop></video>
+        <video src="mov/background.mp4" autoplay muted loop></video>
       </div>
       <div class="content">
         <h1>Hestu P</h1>
-        <h3>Website Using Bootstrap 4</h3>
+        <h3>"Audere est Facere"</h3>
       </div>
   </div>
 
 
   <div class="main">
     <center>
-      <h4 id="work">Some of my work :</h4>
+      <h4 id="portfolio">My Portfolio :</h4>
     </center>
-    <div class="row mt-4">
+    <div class="row">
       <div class="col-sm-4 col-md-4 col-lg-4 gaya" data-aos="fade-right">
         <center>
           <button type="button" class="btn btn-primary btn-sm"
@@ -175,7 +55,7 @@
             00design
           </button>
         </center>
-        <img src="work1.PNG" alt="00design">
+        <img src="img/work1.PNG" alt="00design">
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4 gaya" data-aos="fade-down">
         <center>
@@ -184,16 +64,16 @@
             covid19
           </button>
         </center>
-        <img src="work2.PNG" alt="covid19">
+        <img src="img/work2.PNG" alt="covid19">
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4 gaya" data-aos="fade-left">
         <center>
           <button type="button" class="btn btn-primary btn-sm"
-            onclick=" window.open('https://hestu14.github.io/bmi/','_blank')">
+            onclick=" window.open('https://hestu14.github.io/bmi_v2/','_blank')">
             BMI
           </button>
         </center>
-        <img src="work3.PNG" alt="bmi">
+        <img src="img/work3.PNG" alt="bmi">
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4 gaya" data-aos="fade-right">
         <center>
@@ -202,7 +82,7 @@
             Jokes Bapak2
           </button>
         </center>
-        <img src="work4.PNG" alt="jokes_bapak2">
+        <img src="img/work4.PNG" alt="jokes_bapak2">
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4 gaya" data-aos="fade-up">
         <center>
@@ -211,7 +91,7 @@
             List Wibu Movies
           </button>
         </center>
-        <img src="work5.PNG" alt="anime">
+        <img src="img/work5.PNG" alt="anime">
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4 gaya" data-aos="fade-left">
         <center>
@@ -220,7 +100,7 @@
             Today Quote
           </button>
         </center>
-        <img src="work6.PNG" alt="quote">
+        <img src="img/work6.PNG" alt="quote">
       </div>
     </div>
   </div>
@@ -249,14 +129,7 @@
       crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 800,
-      }
-      );
-
-
-    </script>
+    <script src="script/aos.js"></script>
 </body>
 
 </html>

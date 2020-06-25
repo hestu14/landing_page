@@ -1,0 +1,100 @@
+.navbar {
+  background-color: rgba(10, 33, 73, 0.7);
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  position: fixed;
+}
+
+.main {
+  margin-bottom: 20px;
+  margin-top: 60px;
+  color: maroon;
+  overflow: hidden;
+}
+
+.main img {
+  width: 90%;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.main button {
+  margin-top: 10px;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  background-image: linear-gradient(135deg, #92FFC0 10%, #002661 100%);
+  color: whitesmoke;
+}
+
+.footer a {
+  color: whitesmoke;
+}
+
+:root {
+  --primary-color: #3a4052;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 1.2;
+}
+
+.showcase {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--primary-color) url('img/backgrouund_set.png') no-repeat center center/cover;
+}
+
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.video-container:after {
+  content: '';
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+.content {
+  z-index: 2;
+}
