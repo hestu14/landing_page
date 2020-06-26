@@ -1,30 +1,41 @@
 .navbar {
-  background-color: rgba(10, 33, 73, 0.7);
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 99;
-  position: fixed;
+background-color: rgba(10, 33, 73, 0.7);
+top: 0;
+right: 0;
+left: 0;
+z-index: 99;
+position: fixed;
 }
 
 .main {
-  margin-bottom: 20px;
-  margin-top: 60px;
-  color: midnightblue;
-  overflow: hidden;
+margin-bottom: 20px;
+margin-top: 60px;
+color: midnightblue;
+overflow: hidden;
 }
 
 .main img {
-  width: 90%;
-  margin-top: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
+width: 90%;
+margin-top: 10px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 10px;
+opacity: 1;
+-webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
+}
+
+.main img:hover {
+    opacity: 0.7;
 }
 
 .main button {
-  margin-top: 10px;
+margin-top: 10px;
+}
+
+.main button:hover {
+    transform: scale(1.05);
 }
 
 .footer {
@@ -40,6 +51,10 @@
     height: 40px;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+.footer img:hover {
+    transform: scale(1.1);
 }
 
 
@@ -103,6 +118,81 @@ h1 {
 }
 
 .content {
-     z-index: 2;
+    z-index: 2;
 }
 
+.loader-wrapper {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #242f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color: whitesmoke;
+    overflow: hidden;
+}
+
+.loader {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border: 5px solid rgba(10, 33, 73, 0.7);
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+    0% {
+    transform: rotate(0deg);
+    }
+    
+    25% {
+    transform: rotate(180deg);
+    }
+    
+    50% {
+    transform: rotate(180deg);
+    }
+    
+    75% {
+    transform: rotate(360deg);
+    }
+    
+    100% {
+    transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+    height: 0%;
+    }
+    
+    25% {
+    height: 0%;
+    }
+    
+    50% {
+    height: 100%;
+    }
+    
+    75% {
+    height: 100%;
+    }
+    
+    100% {
+    height: 0%;
+    }
+}
