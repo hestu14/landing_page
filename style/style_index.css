@@ -1,29 +1,46 @@
 .navbar {
-background-color: rgba(10, 33, 73, 0.7);
-top: 0;
-right: 0;
-left: 0;
-z-index: 99;
-position: fixed;
+    /* background-color: rgba(10, 33, 73, 0.7); */
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    position: fixed;
 }
 
+.nav-link {
+    color: rgba(81, 163, 115, 0.95) !important;
+}
+
+.nav-link:hover {
+    transform: scale(1.02);
+    border-bottom: 2px solid rgba(81, 163, 115, 0.95);
+}
+
+@media only screen and (max-width: 576px) {
+    .navbar-nav {
+        display: inline-block;
+        text-align: center;
+    }
+  }
+
+
 .main {
-margin-bottom: 20px;
-margin-top: 60px;
-color: midnightblue;
-overflow: hidden;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    color: midnightblue;
+    overflow: hidden;
 }
 
 .main img {
-width: 90%;
-margin-top: 10px;
-display: block;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 10px;
-opacity: 1;
--webkit-transition: .3s ease-in-out;
-transition: .3s ease-in-out;
+    width: 90%;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 .main img:hover {
@@ -31,7 +48,7 @@ transition: .3s ease-in-out;
 }
 
 .main button {
-margin-top: 10px;
+    margin-top: 10px;
 }
 
 .main button:hover {
